@@ -2,7 +2,6 @@
 
 var gulp = require('gulp');
 var sass = require('gulp-sass');
-var importOnce = require('node-sass-import-once');
 
 var config = {
     bootstrapDir: './node_modules/bootstrap',
@@ -15,12 +14,6 @@ gulp.task('css', function() {
     .pipe(sass({
       includePaths: [config.bootstrapDir + '/scss'],
       outputStyle: 'nested',
-      importer: importOnce,
-      importOnce: {
-        index: false,
-        css: false,
-        bower: false
-      }
     }).on('error', sass.logError))
     .pipe(gulp.dest(config.publicDir));
 });

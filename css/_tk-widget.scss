@@ -1,0 +1,8 @@
+@import "tk-core";
+
+%tk-widget {
+  @extend %tk-core-container;
+  .tk-widget {
+    color: red;
+  }
+}

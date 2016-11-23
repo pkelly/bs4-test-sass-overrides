@@ -1,2 +1,14 @@
+@import "tk-core";
+@import "tk-widget";
+
+body {
+  @extend %tk-core-container;
+  @extend %tk-widget;
+}
+
+.my-namespace {
+}
+
+
 @import "variables";
 @import "bootstrap";
